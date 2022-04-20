@@ -1,19 +1,20 @@
-let arrayOfNumbers = [100, 55, 15, 300, 20];
+const $calc = document.getElementById("calc");
+let anything = [100, 55, 15];
 
-let e = 0 + arrayOfNumbers[0];
-document.write(0 + "+" + arrayOfNumbers[0] + "=" + e + "</br>");
+function summ(mass) {
+    let element = 0
+    let itogo = ""
+    for (let index = 0; index < mass.length; index++) {
+        result = element + mass[index];
 
-l = e + arrayOfNumbers[1];
-document.write( e + "+" + arrayOfNumbers[1] + "=" + l + "</br>");
+        itogo += element + "+" + mass[index] + "=" + result + "<br>";
 
-i = l + arrayOfNumbers[2];
-document.write(l + "+" + arrayOfNumbers[2] + "=" + i + "</br>")
-
-n = i + arrayOfNumbers[3];
-document.write(i + "+" + arrayOfNumbers[3] + "=" + n + "</br>")
-
-a = n + arrayOfNumbers[4];
-document.write(n + "+" + arrayOfNumbers[4] + "=" + n + "</br>")
+        element = result;
+        console.log(itogo);
 
 
-let arrayOfNum = [1100, 132, 688]
+    }
+    return itogo
+}
+
+$calc.innerHTML = summ(anything);
